@@ -1,1 +1,8 @@
 <%= render 'header' %>
+
+<h1>Books!</h1>
+<ul>
+  <% @books.each do |book| %>
+    <li><%= link_to book.title, book%> (<%= book.pages %> pages)</li>
+  <% end %>
+</ul>

@@ -19,13 +19,20 @@
  }
 
  ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+     display: block;
+     list-style-type: disc;
+     margin-block-start: 1em;
+     margin-block-end: 1em;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+     padding-inline-start: 40px;
+ }
+
+input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
 }
 
 .field_with_errors {

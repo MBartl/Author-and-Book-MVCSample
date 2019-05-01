@@ -1,1 +1,18 @@
 <%= render 'header' %>
+
+<h1><%= @book.title %> (<%= @book.pages %> pages)</h1>
+<h2>Authors:</h2>
+<ul>
+  <% @book.credits.each do |credit| %>
+    <li>
+      <%= link_to "#{credit.author.name} (b. #{credit.author.birth_year})", credit.author %><br>
+      <%= button_to "Delete #{credit.author.name}", credit_path(credit), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+<%= form_for @create_credit do |f| %>
+  <%= f.label "Author" %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= f.collection_select :author_id, Author.all, :id, :name %>
+  <%= f.submit "Add author" %>
+<% end %>
