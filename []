@@ -1,0 +1,22 @@
+      invoke  active_record
+      create    db/migrate/20190501162829_create_books.rb
+      create    app/models/book.rb
+      invoke    test_unit
+      create      test/models/book_test.rb
+      create      test/fixtures/books.yml
+      invoke  controller
+      create    app/controllers/books_controller.rb
+      invoke    erb
+      create      app/views/books
+      invoke    test_unit
+      create      test/controllers/books_controller_test.rb
+      invoke    helper
+      create      app/helpers/books_helper.rb
+      invoke      test_unit
+      invoke    assets
+      invoke      coffee
+      create        app/assets/javascripts/books.coffee
+      invoke      scss
+      create        app/assets/stylesheets/books.scss
+      invoke  resource_route
+       route    resources :books
